@@ -1,0 +1,52 @@
+<% @quarto.each do |q| %>
+<% @tipo.each do |t| %>
+
+<% if q.tipo_quarto == 1 && t.id == 1 %>
+<section>
+  <h1 id="titulo">Quarto N° <%= q.numero %> Simples</h1>
+
+  <br><br><br>
+
+  <%= image_tag "simples_index.jpg", :id => "img_info" %>
+  <p>NOME DO QUARTO: <%= q.nome_do_quarto %></p>
+  <p>NÚMERO DO QUARTO: <%= q.numero %></p>
+  <p>TIPO DO QUARTO: <%= t.tipo %></p>
+  <p>DIARIA: R$ <%= t.valor_diaria %></p>
+  <%= link_to "Mais informações.", room_show_path(q.id), :id => "room_info" %>
+
+  <% if q.reservado? %>
+    <%= link_to "Reservado", "#", :id => "btnReservar-false" %>
+  <% else %>
+    <%= link_to "Reservar", new_reserv_path(q.id), :id => "btnReservar-true" %>
+  <% end %>
+
+</section>
+<% end %>
+
+
+<% if q.tipo_quarto == 2 && t.id == 2 %>
+<section>
+  <h1 id="titulo">Quarto N° <%= q.numero %> Conjugado</h1>
+
+  <br><br><br>
+
+  <%= image_tag "conjugado.jpg", :id => "img_info" %>
+  <p>NOME DO QUARTO: <%= q.nome_do_quarto %></p>
+  <p>NÚMERO DO QUARTO: <%= q.numero %></p>
+  <p>TIPO DO QUARTO: <%= t.tipo %></p>
+  <p>DIARIA: R$ <%= t.valor_diaria %></p>
+  <%= link_to "Mais informações.", room_show_path(q.id), :id => "room_info" %>
+
+  <% if q.reservado? %>
+    <%= link_to "Reservado", "#", :id => "btnReservar-false" %>
+  <% else %>
+    <%= link_to "Reservar", new_reserv_path(q.id), :id => "btnReservar-true" %>
+  <% end %>
+
+</section>
+<% end %>
+
+
+<% end %>
+<% end %>
+

@@ -1,0 +1,24 @@
+<style type="text/css">
+  section{
+    height: 100%;
+    position: relative;
+  }
+</style>
+<section>
+  <h1 id="titulo">Clientes cadastrados</h1><br><br><br>
+
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>ID</th>
+    </tr>
+
+
+    <% @clientes.each do |c| %>
+    <tr>
+        <td><%= c.nome %></td>
+        <td><%= c.id %></td>
+      </tr>
+    <% end %>
+  </table>
+</section>

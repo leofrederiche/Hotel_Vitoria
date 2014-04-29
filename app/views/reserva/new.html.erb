@@ -1,0 +1,24 @@
+<section>
+  <h1 id="titulo">Reservar o quarto <%= @quarto.id %></h1><br><br>
+
+  <%= form_for @reserva, url:new_reserv_path do |r| %>
+    <p>
+      <%= r.label :quarto_id, "Quarto ID" %>:
+      <%= r.text_field :quarto_id, :value => "#{@quarto.id}", readonly: true %>
+    </p>
+    <p>
+      <%= r.label :inicio %>:
+      <%= r.date_field :inicio %>
+    </p>
+    <p>
+      <%= r.label :fim %>:
+      <%= r.date_field :fim %>
+    </p>
+    <p>
+      <%= r.label :cliente, "Cliente" %>:
+      <%= r.collection_select(:cliente_id, Cliente.all, :id, :nome) %>
+
+    </p>
+      <%= r.submit "Reservar" %>
+  <% end %>
+</section>

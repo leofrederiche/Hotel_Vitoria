@@ -1,0 +1,175 @@
+body{
+  margin: 0px;
+  background-color: rgba(250,250,250,0.7);
+}
+
+header{
+  position: relative;
+  top: 40px;
+  width: 99.8%;
+  height: 500px;
+  background: image-url("fundo_header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(0,0,0,0.3);
+  margin: 0 auto;
+}
+
+#menu{
+  position: fixed;
+  top: -1px;
+  background-color: white;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  height: 9%;
+  margin: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+#cliente{
+  color: red;
+  position: relative;
+  float: right;
+  width: 150px;
+}
+
+#cliente:hover{
+  background-color: white;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+li{
+  text-decoration: none;
+  color: black;
+  display: inline;
+  padding: 5px;
+  transition: 1s;
+}
+
+li:hover{
+  background-color: rgba(0,0,0,0.2);
+  width: 95%;
+}
+
+img{
+  float: right;
+  margin: 20px;
+}
+
+section{
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 4px;
+  background-color: white;
+  height: 350px;
+  margin-top: 20px;
+  text-indent: 30px;
+  width: 70%;
+  top: 40px;
+  font-size: 19px;
+}
+
+/* INDEX */
+
+#titulo{
+  background-color: rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  margin-top: 0px;
+  text-align: left;
+  float: left;
+  padding-right: 30px;
+  border-radius: 2px;
+}
+
+#img_info{
+  width: 250px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 5px;
+  float: left;
+  position: relative;
+}
+
+aside{
+  position: absolute;
+  left: 73%;
+  top: 90%;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 2px;
+  border-right: none;
+  background-color: white;
+  padding: 10px;
+  text-indent: 5px;
+  width: 25%;
+
+}
+
+/* footer */
+footer{
+  position: relative;
+  color: rgba(0,0,0,0.4);
+  text-align: center;
+  top: 40px;
+}
+
+/* quartos */
+
+#btnReservar-true{
+  position: relative;
+  padding: 5px;
+  background-color: lightgreen;
+  float: right;
+}
+
+#btnReservar-false{
+  position: relative;
+  padding: 5px;
+  background-color: red;
+  float: right;
+  z-index: 1;
+}
+
+#room_info{
+  color: blue;
+}
+
+/* cliente */
+
+input{
+  position: absolute;
+  left: 15%;
+  font-size: 20px;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+
+input:hover{
+  border: 1px solid black;
+}
+
+/* reserva completa */
+
+h4{
+  color: green;
+  text-shadow: 0px 0px 15px lightgreen;
+}
+
+td{
+  background-color: rgba(0,0,0,0.1);
+  text-align: center;
+  text-indent: 0;
+}
+
+th{
+  background-color: lightgreen;
+  text-align: center;
+  text-indent: 0;
+  padding: 0px 35px;
+}

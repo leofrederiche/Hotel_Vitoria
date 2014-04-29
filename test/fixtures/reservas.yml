@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  inicio: 2014-04-04
+  fim: 2014-04-04
+  cliente: 1
+
+two:
+  inicio: 2014-04-04
+  fim: 2014-04-04
+  cliente: 1

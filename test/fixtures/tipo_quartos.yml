@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tipo: MyString
+  valor_diaria: 1.5
+
+two:
+  tipo: MyString
+  valor_diaria: 1.5

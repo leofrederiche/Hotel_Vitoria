@@ -1,0 +1,90 @@
+<style type="text/css">
+  section{
+    height: 100%;
+    position: relative;
+  }
+</style>
+
+<section>
+  <h1 id="titulo"><%= label_tag @quarto.nome_do_quarto %></h1><br><br><br>
+
+  <% if @quarto.tipo_quarto == 1 %>
+
+    <%= image_tag "simples_index.jpg", :id => "img_info" %>
+    <p>Quarto simples com uma unica cama de casal.</p>
+    <h3>Beneficios:</h3>
+    <ul>
+      <ol>. TV com 100 filmes a disposição</ol>
+      <ol>. Computador com acesso a internet de 10mg</ol>
+      <ol>. Despertador com projetor de parede.</ol>
+      <ol>. Café da manha no quarto.</ol>
+    </ul>
+    <h5>Valor: R$ 100,00</h5><br>
+
+    <table>
+    <tr>
+      <th>Número da reserva</th>
+      <th>Id do quarto</th>
+      <th>Entrada</th>
+      <th>Saida</th>
+      <th>Id do cliente</th>
+    </tr>
+
+    <% @quarto.reservas.each do |r| %>
+    <tr>
+      <td><%= r.id %></td>
+      <td><%= r.quarto_id %></td>
+      <td><%= r.inicio %></td>
+      <td><%= r.fim %></td>
+      <td><%= r.cliente_id %></td>
+    </tr>
+    <% end %>
+    </table>
+
+
+  <% else %>
+
+    <%= image_tag "conjugado.jpg", :id => "img_info" %>
+    <p>Quarto com 3 camas, sendo 1 de casal</p>
+    <h3>Beneficios:</h3>
+    <ul>
+      <ol>. TV com 300 filmes a disposição.</ol>
+      <ol>. Computador com acesso a internet de 50mg.</ol>
+      <ol>. Despertador com projetor de parede.</ol>
+      <ol>. Café da manha no quarto.</ol>
+      <ol>. Ar Condicionado.</ol>
+      <ol>. Video game para até 4 pessoas.</ol>
+    </ul>
+    <p>Valor: R$ 199,00</p>
+
+    <table>
+    <tr>
+      <th>Número da reserva</th>
+      <th>Id do quarto</th>
+      <th>Entrada</th>
+      <th>Saida</th>
+      <th>Id do cliente</th>
+    </tr>
+
+    <% @quarto.reservas.each do |r| %>
+    <tr>
+      <td><%= r.id %></td>
+      <td><%= r.quarto_id %></td>
+      <td><%= r.inicio %></td>
+      <td><%= r.fim %></td>
+      <td><%= r.cliente_id %></td>
+    </tr>
+    <% end %>
+    </table>
+  <% end %>
+</section>
+
+
+
+
+
+
+
+
+
+

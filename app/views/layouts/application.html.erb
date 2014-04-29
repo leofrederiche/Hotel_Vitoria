@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Vitoria</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <%= image_tag "logo.png" %>
+  <div id="menu">
+    <ul>
+      <li id="home"><%= link_to "Home", root_path %></li>
+      <li id="quartos"><%= link_to "Quartos", rooms_path %></li>
+      <li id="conheca"><%= link_to "Conheça", about_path %></li>
+      <li id="refeicao"><%= link_to "Refeição", food_path %></li>
+      <li id="cadastre-se"><%= link_to "Cadastre-se", new_cliente_path %></li>
+      <li id="clientes"><%= link_to "Clientes", clientes_path %></li>
+    </ul>
+  </div>
+</header>
+
+<%= yield %>
+
+<% if request.url == "http://localhost:3000/conheca" %>
+  <style type="text/css">
+    #conheca{
+      background-color: rgba(0,0,0,0.2);
+      width: 95%;
+    }
+
+    header{
+      background: url("/assets/fundo_conheca.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  </style>
+<% end %>
+
+<% if request.url == "http://localhost:3000/" %>
+  <style type="text/css">
+    #home{
+      background-color: rgba(0,0,0,0.2);
+      width: 95%;
+    }
+  </style>
+<% end %>
+
+<% if request.url == "http://localhost:3000/quartos" %>
+  <style type="text/css">
+    #quartos{
+      background-color: rgba(0,0,0,0.2);
+      width: 95%;
+    }
+
+    header{
+      background: url("/assets/fundo_quarto.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  </style>
+<% end %>
+
+<% if request.url == "http://localhost:3000/refeicao" %>
+  <style type="text/css">
+    #refeicao{
+      background-color: rgba(0,0,0,0.2);
+      width: 95%;
+    }
+
+    header{
+      background: url("/assets/fundo_refeicao.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  </style>
+<% end %>
+
+<% if request.url == "http://localhost:3000/cliente/novo" %>
+  <style type="text/css">
+    #cadastre-se{
+      background-color: rgba(0,0,0,0.2);
+      width: 95%;
+    }
+
+    header{
+      background: url("/assets/fundo_cad.jpg");
+      background-size: 100%;
+    }
+  </style>
+<% end %>
+
+<% if request.url == "http://localhost:3000/clientes" %>
+  <style type="text/css">
+    #clientes{
+      background-color: rgba(0,0,0,0.2);
+      width: 95%;
+    }
+
+    header{
+      background: url("/assets/fundo_conheca.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  </style>
+<% end %>
+<footer>
+  <p>@2014 Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
+
+
+

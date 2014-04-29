@@ -1,0 +1,24 @@
+<section>
+  <h1 id="titulo">Cadastre-se já!</h1><br><br>
+  <p>
+    Cadastre-se agora para você poder fazer uma reserva quando quiser,
+    e de onde quiser! Você tambem podera ficar por dentro de todas
+    as novidades do Hotel. Cadastre-se ja!
+  </p>
+
+  <%= form_for @cliente, url:new_cliente_path do |n| %>
+    <p>
+      <%= n.label :nome %>:
+      <%= n.text_field :nome %>
+    </p>
+    <p>
+      <%= n.label :cpf %>:
+      <%= n.text_field :cpf %>
+    </p>
+    <p>
+      <%= n.label :telefone %>:
+      <%= n.text_field :telefone %>
+    </p>
+    <%= n.submit "Cadastrar" %>
+  <% end %>
+</section>
